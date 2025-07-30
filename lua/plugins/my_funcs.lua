@@ -84,4 +84,10 @@ whichkey.add {
   { "<leader>ss", function() require("nvim-silicon").clip()  end, desc = "Create code screenshot" },
 }
 
+whichkey.add {
+  mode = { "n" },
+  { "<leader>xc", function() vim.cmd "CompilerOpen" end, desc = "Open compiler.nvim" },
+  { "<leader>xr", function() vim.cmd "CompilerRedo" end, desc = "Redo compile" },
+}
+
 return {}
