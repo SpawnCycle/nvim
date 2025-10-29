@@ -79,10 +79,18 @@ whichkey.add {
   { "<leader>ss", function() require("nvim-silicon").clip()  end, desc = "Create code screenshot" },
 }
 
--- whichkey.add {
---   mode = { "n" },
---   { "<leader>xc", function() vim.cmd "CompilerOpen" end, desc = "Open compiler.nvim" },
---   { "<leader>xr", function() vim.cmd "CompilerRedo" end, desc = "Redo compile" },
--- }
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
+vim.keymap.set("n", "n", "nzz")
+vim.keymap.set("n", "N", "Nzz")
+
+vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>d", [["_d]])
+
+vim.keymap.set("i", "<C-c>", "<Esc>")
+
+require("notify").setup {
+  top_down = false,
+}
 return {}

@@ -5,11 +5,11 @@ return {
     lazy = false,
     priority = 1000,
     opts = {
-      -- transparent = true,
-      -- styles = {
-      --   sidebars = "transparent",
-      --   floats = "transparent",
-      -- },
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
     },
   },
   {
@@ -106,4 +106,13 @@ return {
     lazy = true,
     init = function() end,
   },
+  -- {
+  --   "folke/snacks.nvim",
+  --   opts = {
+  --     -- Add opts for snack.notifier
+  --     notifier = {
+  --       top_down = false,
+  --     },
+  --   },
+  -- },
 }
