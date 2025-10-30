@@ -106,13 +106,15 @@ return {
     lazy = true,
     init = function() end,
   },
-  -- {
-  --   "folke/snacks.nvim",
-  --   opts = {
-  --     -- Add opts for snack.notifier
-  --     notifier = {
-  --       top_down = false,
-  --     },
-  --   },
-  -- },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      notifier = {
+        top_down = false,
+      },
+    },
+  },
 }

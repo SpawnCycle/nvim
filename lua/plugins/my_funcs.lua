@@ -9,14 +9,14 @@ if vim.g.neovide then
   vim.g.gui_font_size = vim.g.gui_font_default_size
   vim.g.gui_font_face = "CaskaydiaCove Nerd Font Mono"
 
-  RefreshGuiFont = function() vim.opt.guifont = string.format("%s:h%s", vim.g.gui_font_face, vim.g.gui_font_size) end
+  local RefreshGuiFont = function() vim.opt.guifont = string.format("%s:h%s", vim.g.gui_font_face, vim.g.gui_font_size) end
 
-  ResizeGuiFont = function(delta)
+  local ResizeGuiFont = function(delta)
     vim.g.gui_font_size = vim.g.gui_font_size + delta
     RefreshGuiFont()
   end
 
-  ResetGuiFont = function()
+  local ResetGuiFont = function()
     vim.g.gui_font_size = vim.g.gui_font_default_size
     RefreshGuiFont()
   end
@@ -90,7 +90,4 @@ vim.keymap.set("x", "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
-require("notify").setup {
-  top_down = false,
-}
 return {}
