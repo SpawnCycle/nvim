@@ -90,4 +90,8 @@ vim.keymap.set("x", "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
+require("notify").setup {
+  top_down = false,
+}
+
 return {}
