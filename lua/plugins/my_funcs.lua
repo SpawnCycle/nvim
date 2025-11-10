@@ -1,8 +1,12 @@
-local whichkey = require "which-key"
+local wk = require "which-key"
 
 -- I am a 2 space tab person
-vim.tabstop = 2
-vim.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.swapfile = false
+vim.opt.backup = false
 
 if vim.g.neovide then
   vim.g.gui_font_default_size = 11
@@ -37,10 +41,10 @@ end
 
 -- description for whichkey
 -- stylua: ignore
-require("which-key").add {
+wk.add {
   mode = { "n" },
   { "<leader>rn", desc = "Renames variables using treesitter", expr = true, },
-  { "<leader>E",  desc = "Open cwd with oil.nvim", function() vim.cmd "Oil ." end, },
+  { "<leader>E",  function() vim.cmd "Oil ." end, desc = "Open cwd with oil.nvim"},
 }
 -- the actual increname function
 vim.keymap.set("n", "<leader>rn", function() return ":IncRename " .. vim.fn.expand "<cword>" end, { expr = true })
@@ -61,7 +65,7 @@ vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 
 -- align.nvim
 -- stylua: ignore
-whichkey.add {
+wk.add {
   mode = { "v" },
   { "<leader>a", group = "Align" },
   { "<leader>aa", function() require("align").align_to_char { length = 1 }                      end, desc = "Align to 1 character" },
@@ -71,7 +75,7 @@ whichkey.add {
 }
 
 -- stylua: ignore
-whichkey.add {
+wk.add {
   mode = { "v" },
   { "<leader>s", group = "Silicon" },
   { "<leader>sc", function() require("nvim-silicon").shoot() end, desc = "Copy code screenshot to clipboard" },
