@@ -20,17 +20,6 @@ return {
   },
   {
     "AstroNvim/astrolsp",
-    opts = {
-      features = {
-        signature_help = true,
-      },
-      formatting = {
-        disabled = {
-          "clangd",
-          "omnisharp",
-        },
-      },
-    },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -120,5 +109,17 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      top_down = false,
+    },
+  },
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false,
+
+    dependencies = { "saghen/blink.cmp" },
   },
 }
