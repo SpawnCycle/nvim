@@ -100,10 +100,11 @@ require("astrolsp").setup {
   },
   formatting = {
     disabled = {
-      "clangd",
-      "omnisharp",
-      "csharp_ls",
-      "csharpier",
+      "clangd", -- clang-format
+      "omnisharp", -- use clang-format instead, much better than the default c# style formatting
+      "csharp_ls", -- see above
+      "csharpier", -- the default formatter the community pack installs
+      "ts_ls", -- use prettier
     },
   },
 }
