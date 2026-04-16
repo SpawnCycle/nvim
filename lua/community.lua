@@ -14,4 +14,6 @@ return {
   { import = "astrocommunity.quickfix.nvim-bqf" },
 
   { import = "astrocommunity.pack.diff-keybindings" },
+  -- { import = "astrocommunity.color.transparent-nvim" },
+  { import = "astrocommunity.utility.vim-fetch" },
 }
