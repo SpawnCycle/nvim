@@ -96,9 +96,6 @@ return {
     init = function() end,
   },
   {
-    "nvim-neo-tree/neo-tree.nvim",
-  },
-  {
     "folke/snacks.nvim",
     opts = {
       notifier = {
