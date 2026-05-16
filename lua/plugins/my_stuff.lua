@@ -20,6 +20,12 @@ return {
   },
   {
     "AstroNvim/astrolsp",
+    opts = {
+      features = {
+        -- the new codelens sucks, it takes up an extra line
+        codelens = false,
+      },
+    },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",

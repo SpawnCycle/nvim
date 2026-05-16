@@ -11,10 +11,10 @@ return {
   -- { import = "astrocommunity.pack.cs" }, -- omnisharp breaks so fucking often, omfg  TODO: rename to cs-omnisharp once it works again
   -- { import = "astrocommunity.pack.markdown" },
   -- { import = "astrocommunity.pack.hyprlang" },
-  -- { import = "astrocommunity.quickfix.quicker-nvim" },
-  -- { import = "astrocommunity.quickfix.nvim-bqf" },
+  { import = "astrocommunity.quickfix.quicker-nvim" },
+  { import = "astrocommunity.quickfix.nvim-bqf" },
 
-  -- { import = "astrocommunity.pack.diff-keybindings" },
+  { import = "astrocommunity.pack.diff-keybindings" },
   -- { import = "astrocommunity.color.transparent-nvim" },
-  -- { import = "astrocommunity.utility.vim-fetch" },
+  { import = "astrocommunity.utility.vim-fetch" },
 }
